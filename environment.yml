@@ -5,7 +5,4 @@ channels:
 dependencies:
  - python=3.9
  - tox-conda
- - rust
- - git
  - compilers
- - pandoc

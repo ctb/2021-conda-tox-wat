@@ -17,22 +17,21 @@ tox -e py39
 ## Error output:
 
 ```
+rm -fr .tox UNKNOWN.egg-info
+tox -e py39
 .package create: /home/ctbrown/2021-conda-tox-wat/.tox/.package
-.package installdeps: setuptools >= 48, setuptools_scm[toml] >= 4, <6, setuptools_scm_git_archive, milksnake, wheel >= 0.29.0
+.package installdeps: setuptools >= 48
 ERROR: invocation failed (exit code 2), logfile: /home/ctbrown/2021-conda-tox-wat/.tox/.package/log/.package-1.log
 ================================== log start ===================================
-/tmp/tmpwzwy8u2q: 146: /home/ctbrown/miniconda3/envs/failme/etc/conda/deactivate.d/deactivate-gcc_linux-64.sh: Syntax error: "(" unexpected (expecting "fi")
+/tmp/tmpp10ke8je: 146: /home/ctbrown/miniconda3/envs/failme2/etc/conda/deactivate.d/deactivate-gcc_linux-64.sh: Syntax error: "(" unexpected (expecting "fi")
 
 =================================== log end ====================================
-ERROR: could not install deps [setuptools >= 48, setuptools_scm[toml] >= 4, <6, setuptools_scm_git_archive, milksnake, wheel >= 0.29.0]; v = InvocationError("/home/ctbrown/2021-conda-tox-wat/.tox/.package/bin/python -m pip install 'setuptools >= 48' 'setuptools_scm[toml] >= 4, <6' setuptools_scm_git_archive milksnake 'wheel >= 0.29.0'", 2)
+ERROR: could not install deps [setuptools >= 48]; v = InvocationError("/home/ctbrown/2021-conda-tox-wat/.tox/.package/bin/python -m pip install 'setuptools >= 48'", 2)
 py39 create: /home/ctbrown/2021-conda-tox-wat/.tox/py39
-py39 installdeps: pip >= 19.3.1
-ERROR: invocation failed (exit code 2), logfile: /home/ctbrown/2021-conda-tox-wat/.tox/py39/log/py39-1.log
-================================== log start ===================================
-/tmp/tmponbqt9gm: 146: /home/ctbrown/miniconda3/envs/failme/etc/conda/deactivate.d/deactivate-gcc_linux-64.sh: Syntax error: "(" unexpected (expecting "fi")
-
-=================================== log end ====================================
-ERROR: could not install deps [pip >= 19.3.1]; v = InvocationError("/home/ctbrown/2021-conda-tox-wat/.tox/py39/bin/python -m pip install 'pip >= 19.3.1'", 2)
+py39 inst: /home/ctbrown/2021-conda-tox-wat/.tox/.tmp/package/1/UNKNOWN-0.0.0.tar.gz
+py39 installed: UNKNOWN @ file:///home/ctbrown/2021-conda-tox-wat/.tox/.tmp/package/1/UNKNOWN-0.0.0.tar.gz
+py39 run-test-pre: PYTHONHASHSEED='2953931048'
 ___________________________________ summary ____________________________________
-ERROR:   py39: could not install deps [pip >= 19.3.1]; v = InvocationError("/home/ctbrown/2021-conda-tox-wat/.tox/py39/bin/python -m pip install 'pip >= 19.3.1'", 2)
+  py39: commands succeeded
+  congratulations :)
 ```
